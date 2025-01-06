@@ -14,16 +14,16 @@ class PerfectSquares {
 
     companion object {
 
-        private const val maxN = 10000
-        private const val sqrtMaxN = 100
+        private const val MAX_N = 10000
+        private const val SQRT_MAX_N = 100
 
-        private val squares = (1..sqrtMaxN).map { it * it }
+        private val squares = (1..SQRT_MAX_N).map { it * it }
 
-        val dp = IntArray(maxN + 1)
+        val dp = IntArray(MAX_N + 1)
 
         init {
             squares.forEach { dp[it] = 1 }
-            (2..<maxN).forEach { idx ->
+            (2..<MAX_N).forEach { idx ->
                 if (dp[idx] == 0) {
                     dp[idx] = 1 + squares.filter { it <= idx }.minOf { dp[idx - it] }
                 }

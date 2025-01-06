@@ -21,7 +21,7 @@ class PerfectSquaresTest {
     @ParameterizedTest(name = "input {0}, expected {1}")
     @MethodSource("data")
     fun test(input: Int, expected: Int) {
-        assertThat(PerfectSquares().numSquares(input)).isEqualTo(expected);
+        assertThat(PerfectSquares().numSquares(input)).isEqualTo(expected)
     }
 
 }

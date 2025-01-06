@@ -1,13 +1,13 @@
 package com.forketyfork.codingproblems
 
 import org.assertj.core.api.Assertions.assertThat
-import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.params.ParameterizedTest
 import org.junit.jupiter.params.provider.Arguments.of
 import org.junit.jupiter.params.provider.MethodSource
 
 class SmallestWindowTest {
     companion object {
+        @Suppress("SpellCheckingInspection")
         @JvmStatic
         fun data() = arrayOf(
             of("a", "a"),
@@ -26,7 +26,7 @@ class SmallestWindowTest {
     @ParameterizedTest(name = "input {0}, expected {1}")
     @MethodSource("data")
     fun test(input: String, expected: String) {
-        assertThat(SmallestWindow().solve(input)).isEqualTo(expected);
+        assertThat(SmallestWindow().solve(input)).isEqualTo(expected)
     }
 
 }

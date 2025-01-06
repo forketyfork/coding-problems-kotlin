@@ -1,7 +1,7 @@
-import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+import org.gradle.kotlin.dsl.KotlinClosure2
 
 plugins {
-    kotlin("jvm") version "1.8.0"
+    kotlin("jvm") version "2.1.0"
 }
 
 repositories {
@@ -9,15 +9,15 @@ repositories {
 }
 
 dependencies {
-    testImplementation("org.junit.jupiter:junit-jupiter-engine:5.9.1")
-    testImplementation("org.junit.jupiter:junit-jupiter-params:5.9.1")
-    testImplementation("org.assertj:assertj-core:3.23.1")
+    testImplementation("org.junit.jupiter:junit-jupiter-engine:5.11.4")
+    testImplementation("org.junit.jupiter:junit-jupiter-params:5.11.4")
+    testImplementation("org.assertj:assertj-core:3.27.2")
 }
 
 tasks {
 
     wrapper {
-        gradleVersion = "7.6"
+        gradleVersion = "8.12"
     }
 
     test {
@@ -30,13 +30,6 @@ tasks {
 
 }
 
-tasks.withType<KotlinCompile> {
-    kotlinOptions.languageVersion = "1.8"
-    kotlinOptions.jvmTarget = "19"
-    kotlinOptions.freeCompilerArgs = listOf("-Xuse-k2", "-opt-in=kotlin.ExperimentalStdlibApi")
-}
-
-tasks.withType<JavaCompile> {
-    targetCompatibility = "19"
-    sourceCompatibility = "19"
+kotlin {
+    jvmToolchain(21)
 }
