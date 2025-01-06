@@ -6,7 +6,7 @@ package com.forketyfork.codingproblems
  * Given two integers x and y, return the Hamming distance between them.
  *
  * @see <a href="https://leetcode.com/problems/hamming-distance/description/">LeetCode #461. Hamming Distance</a>
- * @see <a href="https://leetcode.com/problems/minimum-bit-flips-to-convert-number/description/">2220. Minimum Bit Flips to Convert Number</a>
+ * @see <a href="https://leetcode.com/problems/minimum-bit-flips-to-convert-number/description/">LeetCode #2220. Minimum Bit Flips to Convert Number</a>
  */
 class BitHammingDistance {
     fun solve(start: Int, goal: Int): Int {
