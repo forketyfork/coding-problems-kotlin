@@ -1,7 +1,7 @@
 name: Build and Test
 permissions:
   contents: read
-  actions: cache,read,write
+  actions: write
   
 on: [ push ]
 jobs:
