@@ -11,14 +11,11 @@ repositories {
 dependencies {
     testImplementation("org.junit.jupiter:junit-jupiter-engine:5.11.4")
     testImplementation("org.junit.jupiter:junit-jupiter-params:5.11.4")
+    testImplementation("org.junit.platform:junit-platform-launcher")
     testImplementation("org.assertj:assertj-core:3.27.2")
 }
 
 tasks {
-
-    wrapper {
-        gradleVersion = "8.12"
-    }
 
     test {
         useJUnitPlatform()
