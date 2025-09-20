@@ -12,7 +12,7 @@ dependencies {
     testImplementation(libs.junit.jupiter.engine)
     testImplementation(libs.junit.jupiter.params)
     testImplementation(libs.assertj.core)
-    testImplementation("org.junit.platform:junit-platform-launcher")
+    testImplementation(libs.junit.platform.launcher)
 }
 
 tasks {
@@ -28,5 +28,5 @@ tasks {
 }
 
 kotlin {
-    jvmToolchain(21)
+    jvmToolchain(24)
 }
