@@ -1,7 +1,7 @@
 import org.gradle.kotlin.dsl.KotlinClosure2
 
 plugins {
-    kotlin("jvm") version "2.2.20"
+    alias(libs.plugins.kotlin.jvm)
 }
 
 repositories {
@@ -9,9 +9,9 @@ repositories {
 }
 
 dependencies {
-    testImplementation("org.junit.jupiter:junit-jupiter-engine:5.13.4")
-    testImplementation("org.junit.jupiter:junit-jupiter-params:5.13.4")
-    testImplementation("org.assertj:assertj-core:3.27.5")
+    testImplementation(libs.junit.jupiter.engine)
+    testImplementation(libs.junit.jupiter.params)
+    testImplementation(libs.assertj.core)
     testImplementation("org.junit.platform:junit-platform-launcher")
 }
 
