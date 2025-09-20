@@ -11,7 +11,7 @@ repositories {
 dependencies {
     testImplementation("org.junit.jupiter:junit-jupiter-engine:5.13.4")
     testImplementation("org.junit.jupiter:junit-jupiter-params:5.13.4")
-    testImplementation("org.assertj:assertj-core:3.27.4")
+    testImplementation("org.assertj:assertj-core:3.27.5")
     testImplementation("org.junit.platform:junit-platform-launcher")
 }
 
