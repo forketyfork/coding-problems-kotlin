@@ -1,7 +1,7 @@
 [versions]
 kotlin = "2.2.20"
 junit-jupiter = "5.13.4"
-assertj = "3.27.5"
+assertj = "3.27.6"
 junit-platform = "1.13.4"
 
 [libraries]
