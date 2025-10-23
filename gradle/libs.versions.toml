@@ -1,5 +1,5 @@
 [versions]
-kotlin = "2.2.20"
+kotlin = "2.2.21"
 junit-jupiter = "6.0.0"
 assertj = "3.27.6"
 junit-platform = "6.0.0"
