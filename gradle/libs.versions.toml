@@ -1,8 +1,8 @@
 [versions]
 kotlin = "2.3.10"
-junit-jupiter = "6.0.2"
+junit-jupiter = "6.0.3"
 assertj = "3.27.7"
-junit-platform = "6.0.2"
+junit-platform = "6.0.3"
 
 [libraries]
 junit-jupiter-engine = { module = "org.junit.jupiter:junit-jupiter-engine", version.ref = "junit-jupiter" }
