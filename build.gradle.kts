@@ -1,5 +1,3 @@
-import org.gradle.kotlin.dsl.KotlinClosure2
-
 plugins {
     alias(libs.plugins.kotlin.jvm)
 }
@@ -19,10 +17,15 @@ tasks {
 
     test {
         useJUnitPlatform()
-        afterTest(KotlinClosure2<TestDescriptor, TestResult, Any>({ descriptor, result ->
-            val test = descriptor as org.gradle.api.internal.tasks.testing.TestDescriptorInternal
-            println("${test.className} > ${test.name} [${test.displayName}]: ${result.resultType}")
-        }))
+        addTestListener(object : TestListener {
+            override fun beforeSuite(suite: TestDescriptor) {}
+            override fun afterSuite(suite: TestDescriptor, result: TestResult) {}
+            override fun beforeTest(testDescriptor: TestDescriptor) {}
+            override fun afterTest(testDescriptor: TestDescriptor, result: TestResult) {
+                val test = testDescriptor as org.gradle.api.internal.tasks.testing.TestDescriptorInternal
+                println("${test.className} > ${test.name} [${test.displayName}]: ${result.resultType}")
+            }
+        })
     }
 
 }
